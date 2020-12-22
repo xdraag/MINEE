@@ -1,3 +1,4 @@
+{
     "api": {
         "id": null,
         "worker-id": null
@@ -5,16 +6,21 @@
     "http": {
         "enabled": false,
         "host": "127.0.0.1",
-        "port": null,
+        "port": 0,
         "access-token": null,
         "restricted": true
     },
     "autosave": true,
     "background": false,
     "colors": true,
+    "title": true,
     "randomx": {
         "init": -1,
         "mode": "auto",
+        "1gb-pages": false,
+        "rdmsr": true,
+        "wrmsr": true,
+        "cache_qos": false,
         "numa": true
     },
     "cpu": {
@@ -23,31 +29,68 @@
         "hw-aes": null,
         "priority": null,
         "memory-pool": false,
+        "yield": true,
+        "max-threads-hint": 100,
         "asm": true,
-        "yield": true
+        "argon2-impl": null,
+        "astrobwt-max-size": 550,
+        "cn/0": false,
+        "cn-lite/0": false,
+        "kawpow": false
+    },
+    "opencl": {
+        "enabled": false,
+        "cache": true,
+        "loader": null,
+        "platform": "AMD",
+        "adl": true,
+        "cn/0": false,
+        "cn-lite/0": false
     },
     "cuda": {
         "enabled": false,
-        "loader": null
+        "loader": null,
+        "nvml": true,
+        "cn/0": false,
+        "cn-lite/0": false
     },
-    "donate-level": 5,
+    "donate-level": 1,
     "donate-over-proxy": 1,
     "log-file": null,
     "pools": [
         {
-            "coin": "monero",
+            "algo": null,
+            "coin": null,
             "url": "xmrpool.eu:5555",
             "user": "42FoD8EtKP8fr2pFizngeNF4R123jPpuF9xnbUWfYQVv1CWK4HH3FLmaWuPhmp1QoMZFcu2WhvBxtFCPR57ydy5A7kehCAc",
             "pass": "x",
-            "rig-id": "test",
-            "keepalive": true,
-            "enabled": true
+            "rig-id": null,
+            "nicehash": false,
+            "keepalive": false,
+            "enabled": true,
+            "tls": false,
+            "tls-fingerprint": null,
+            "daemon": false,
+            "socks5": null,
+            "self-select": null
         }
     ],
-    "print-time": 1800,
-    "retries": 1,
+    "print-time": 60,
+    "health-print-time": 60,
+    "retries": 5,
     "retry-pause": 5,
     "syslog": false,
+    "tls": {
+        "enabled": false,
+        "protocols": null,
+        "cert": null,
+        "cert_key": null,
+        "ciphers": null,
+        "ciphersuites": null,
+        "dhparam": null
+    },
     "user-agent": null,
-    "watch": true
+    "verbose": 0,
+    "watch": true,
+    "pause-on-battery": false
 }
